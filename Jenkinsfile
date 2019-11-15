@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent windows
 	stages {
 		stage('---clean---'){
 			steps {
@@ -15,7 +15,7 @@ pipeline {
 		}
 		stage('---package---'){
 			steps {
-				tool name: 'maven3.3.3', type: 'maven'
+				tool name: 'maven 3.3.3', type: 'maven'
 				sh "mvn package"
 			}
 		}
